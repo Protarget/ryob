@@ -1,0 +1,86 @@
+:root {
+    --primary-background-color: #99f;
+    --secondary-background-color: #cff;
+    --primary-foreground-color: #77d;
+    --secondary-foreground-color: #add;
+}
+
+body {
+    font-family: "Comic Sans MS", verdana, sans-serif;
+    background: #99f url(http://byobxp.com/images/cat.gif) top left no-repeat;
+    margin: 0px;
+    width: 100%;
+    background-color: var(--primary-background-color);
+}
+
+.ryob-wrapper {
+    padding: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 12px;
+}
+
+.ryob-wrapper .menu-container {
+    grid-column-start: span 1;
+    justify-self: right;
+}
+
+.ryob-wrapper .banner-container {
+    grid-column-start: span 1;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 100px 400px 100px;
+    grid-template-rows: 100px;
+    grid-gap: 10px;
+}
+
+.ryob-wrapper .banner-container .banner {
+    justify-self: center;
+    align-self: center;
+    width: 400px;
+    height: 100px;
+}
+
+.ryob-wrapper .banner-container .cornerpet {
+    justify-self: center;
+    align-self: center;
+    width: 88px;
+    height: 88px;
+}
+
+.ryob-wrapper .content-container {
+    grid-column-start: span 3;
+}
+
+.modal-container {
+    padding: 12px;
+    display: grid;
+    background-color: var(--secondary-background-color);
+    grid-template-columns: max-content auto;
+    grid-template-rows: auto;
+    grid-gap: 12px;
+    border: 1px solid var(--secondary-foreground-color);
+}
+
+.modal-container .header {
+    text-align: center;
+    border-bottom: 1px solid var(--secondary-foreground-color);
+    grid-column-start: span 2;
+}
+
+.modal-container .error {
+    grid-column-start: span 2;
+    background-color: red;
+    color: white;
+}
+
+.modal-container label {
+    display: block;
+    text-align: right;
+    grid-column-start: 1;
+    padding: 0.5em 0.5em 0.5em 0;
+}
+
+.modal-container input {
+    grid-column-start: 2;
+}
