@@ -1,0 +1,31 @@
+<form class="ryob-modal" action="/users/register" method="post">
+    <div class="ryob-modal-header">
+        Register
+    </div>
+    <div class="ryob-modal-input-group">
+        <label class="ryob-modal-label" for="user_name">Username</label>
+        <input id="user_name" name="user_name" class="ryob-modal-input ryob-modal-input-text" type="text"
+            value="{{previous.user_name}}" />
+    </div>
+    <div class="ryob-modal-input-group">
+        <label class="ryob-modal-label" for="password">Password</label>
+        <input id="password" name="password" class="ryob-modal-input ryob-modal-input-password" type="password" />
+    </div>
+    <div class="ryob-modal-input-group">
+        <label class="ryob-modal-label" for="confirm_password">Confirm Password</label>
+        <input id="confirm_password" name="confirm_password" class="ryob-modal-input ryob-modal-input-password"
+            type="password" />
+    </div>
+    <div class="ryob-modal-input-group">
+        <input type="submit" class="ryob-modal-input ryob-modal-input-submit" value="Register" />
+    </div>
+    {{#if errors}}
+    <div class="ryob-modal-errors">
+        {{#each errors}}
+        <div class="ryob-modal-error">
+            {{this}}
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
+</form>

@@ -3,13 +3,13 @@ extern crate diesel;
 extern crate actix_web;
 extern crate env_logger;
 extern crate log;
+#[macro_use]
 extern crate serde_json;
 
 pub mod controllers;
 pub mod database;
 pub mod models;
 pub mod schema;
-pub mod services;
 pub mod utils;
 
 use actix_session::CookieSession;
@@ -33,6 +33,11 @@ fn main() -> std::io::Result<()> {
             .data(pool.clone())
             .register_data(handlebars_data.clone())
             .service(actix_files::Files::new("/styles", "static/styles/"))
+            .route("/", web::get().to(crate::controllers::index::get))
+            .route("/users/register", web::get().to(crate::controllers::users::register::get))
+            .route("/users/register", web::post().to(crate::controllers::users::register::post))
+            .route("/users/login", web::get().to(crate::controllers::users::login::get))
+            .route("/users/login", web::post().to(crate::controllers::users::login::post))
     })
     .bind("127.0.0.1:8088")?
     .run()

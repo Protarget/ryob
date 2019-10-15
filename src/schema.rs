@@ -29,4 +29,8 @@ joinable!(posts -> topics (posted_in));
 joinable!(posts -> users (created_by));
 joinable!(topics -> users (created_by));
 
-allow_tables_to_appear_in_same_query!(posts, topics, users,);
+allow_tables_to_appear_in_same_query!(
+    posts,
+    topics,
+    users,
+);

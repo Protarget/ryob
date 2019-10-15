@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #99f;
+    --secondary-color: #cff;
+    --primary-color-highlight: #77d;
+    --secondary-color-highlight: #add;
+    --primary-error-color: #fcc;
+    --primary-error-color-highlight: #f00;
+    --min-safe-size: 600px;
+    --normal-spacing: 8px;
+    --wide-spacing: 16px;
+    --small-font-size: 12px;
+    --normal-font-size: 16px;
+    --large-font-size: 24px;
+    --very-large-font-size: 32px;
+    
+    font: var(--normal-font-size) sans-serif;
+    min-width: var(--min-safe-size);
+    background: var(--primary-color) url(http://byobxp.com/images/cat.gif) top left no-repeat
+}
+
+a {
+    text-decoration: none;
+}
+
+.ryob-main {
+    display: grid;
+    grid-gap: var(--normal-spacing);
+    grid-template-columns: auto;
+    justify-items: center;
+}
+
+.ryob-menu {
+    justify-self: right;
+    width: 100%;
+    background-color: var(--secondary-color);
+}
+
+.ryob-menu-item {
+    font-weight: bold;
+}
+
+.ryob-banner-container {
+    display: grid;
+    grid-template-columns: 88px 400px 88px;
+    grid-template-rows: 100px;
+    grid-gap: 10px;
+}
+
+.ryob-cornerpet {
+    width: 88px;
+    height: 88px;
+    justify-self: center;
+    align-self: center;
+}
+
+.ryob-banner {
+    width: 400px;
+    height: 100px;
+    justify-self: center;
+    align-self: center;
+}
+
+.ryob-modal-container {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color-highlight);
+    width: max-content;
+    max-width: var(--min-safe-size);
+    justify-self: center;
+}
+
+.ryob-modal {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-items: center;
+    grid-gap: var(--normal-spacing);
+}
+
+.ryob-modal-header {
+    font-size: var(--large-font-size);
+    font-weight: bold;
+    text-align: center;
+    border-bottom: 1px solid var(--secondary-color-highlight);
+    padding-bottom: var(--normal-spacing);
+    margin-bottom: var(--normal-spacing);
+    width: 100%;
+}
+
+.ryob-modal-input-group {
+    display: block;
+    width: 100%;
+}
+
+.ryob-modal-input {
+    width: 100%;
+}
+
+.ryob-modal-label {
+    display: block;
+    font-weight: bold;
+    font-size: var(--small-font-size);
+    text-transform: capitalize;
+}
+
+.ryob-modal-errors {
+    padding: 5px;
+    width: 100%;
+    color: var(--primary-error-color-highlight);
+    border: 1px solid var(--primary-error-color-highlight);
+    background-color: var(--primary-error-color);
+}
